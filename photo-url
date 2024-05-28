@@ -1,0 +1,1 @@
+curl -d 'https://st2.depositphotos.com/3591429/5995/i/450/depositphotos_59954731-stock-photo-large-group-of-people.jpg' http://127.0.0.1:8080/function/facesdetection-python -o result
