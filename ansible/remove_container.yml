@@ -1,0 +1,15 @@
+---
+- name: Remove Face Detection Web App container
+  hosts: local
+  become: no
+  tasks:
+    - name: Stop Docker container
+      docker_container:
+        name: face-detection-webapp
+        state: stopped
+        force_kill: yes
+
+    - name: Remove Docker container
+      docker_container:
+        name: face-detection-webapp
+        state: absent
