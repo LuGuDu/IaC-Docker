@@ -1,0 +1,17 @@
+---
+- name: Deploy Face Detection Web App container
+  hosts: local
+  become: false
+  tasks:
+    - name: Pull Docker image
+      docker_image:
+        name: lugudu/face-detection-webapp
+        source: pull
+
+    - name: Run Docker container
+      docker_container:
+        name: face-detection-webapp
+        image: lugudu/face-detection-webapp
+        state: started
+        ports:
+          - "8080:8080"

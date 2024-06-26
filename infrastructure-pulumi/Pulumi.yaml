@@ -1,0 +1,10 @@
+name: infrastructure-pulumi
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A complete Pulumi infrastrucutre with Docker
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: python
